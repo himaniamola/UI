@@ -1,0 +1,32 @@
+<div class="card" style="width: 36rem">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <label>{{msg}}</label>
+    <div class="card-body">
+      <div class="mb-3 row">
+        <label for="staticUserName" class="col-sm-2 col-form-label">User Name</label>
+        <div class="col-sm-10">
+          <input type="text" id="staticEmail" formControlName="username">
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="text" id="emailId" formControlName="email">
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10" style="width:215px">
+          <input type="password" class="form-control" id="inputPassword" formControlName="password">
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10" style="width:200px">
+          <button type="submit" class="btn btn-primary" style="width:190px" [attr.disable]="!registerForm.valid">Register</button>
+        </div>
+
+      </div>
+    </div>
+  </form>
+</div>
